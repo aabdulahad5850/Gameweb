@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCADE.UZ | Browser Mini-Games Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="box1" id="puzzleGate">
+        <div class="box2">
+            <div class="box3">
+                <i class="fa-solid fa-puzzle-piece"></i>
+                <h2>PORTAL LOCKED</h2>
+                <p>Complete the missing piece to enter the arena</p>
+            </div>
+            <div class="box4">
+                <div class="box5">
+                    <div class="box6"><i class="fa-solid fa-gamepad"></i></div>
+                    <div class="box6"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="box6"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="box6 box7" id="targetSlot">
+                        <span>DROP HERE</span>
+                    </div>
+                </div>
+                <div class="box8">
+                    <p>Drag or Click the missing piece:</p>
+                    <div class="box9" id="puzzlePiece" draggable="true">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="box10" id="gateStatus">Waiting for puzzle piece...</div>
+        </div>
+    </div>
+
+    <div class="box11" id="mainSite">
+        <header class="box12">
+            <div class="box13">
+                <a href="#home" class="box14">
+                    <i class="fa-solid fa-dice-d20"></i>
+                    <span>ARCADE.UZ</span>
+                </a>
+                <nav class="box15">
+                    <a href="#home" class="box16">Home</a>
+                    <a href="#arena" class="box16">Live Arena</a>
+                    <a href="#catalog" class="box16">Games</a>
+                    <a href="#leaderboard" class="box16">Leaderboard</a>
+                    <a href="#tournaments" class="box16">Tournaments</a>
+                    <a href="#esports" class="box16">Top Titles</a>
+                    <a href="#gear" class="box16">Pro Gear</a>
+                </nav>
+                <div class="box17">
+                    <div class="box18">
+                        <i class="fa-solid fa-coins"></i>
+                        <span id="userCoins">1250</span>
+                    </div>
+                    <button class="box19" id="themeBtn" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-sun"></i>
+                    </button>
+                    <button class="box20" id="profileBtn">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                        <span>PRO PLAYER</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <section class="box21" id="home">
+            <div class="box22">
+                <div class="box23">
+                    <div class="box24">
+                        <span class="box25"></span>
+                        <span>INSTANT BROWSER GAMING</span>
+                    </div>
+                    <h1>PLAY CLASSIC <i class="fa-solid fa-plus"></i> MODERN MINI-GAMES INSTANTLY</h1>
+                    <p>No downloads, no waiting. Jump straight into reflex challenges, memory grids, and arcade battles directly in your browser.</p>
+                    <div class="box26">
+                        <a href="#arena" class="box27" id="heroPlayBtn">
+                            <i class="fa-solid fa-play"></i>
+                            <span>PLAY NOW</span>
+                        </a>
+                        <a href="#catalog" class="box28">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <span>EXPLORE GAMES</span>
+                        </a>
+                    </div>
+                    <div class="box29">
+                        <div class="box30">
+                            <h3 class="box31" data-target="48">0</h3>
+                            <p>Mini-Games</p>
+                        </div>
+                        <div class="box30">
+                            <h3 class="box31" data-target="15400">0</h3>
+                            <p>Active Players</p>
+                        </div>
+                        <div class="box30">
+                            <h3 class="box31" data-target="99">0</h3>
+                            <p>FPS Smooth</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box32">
+                    <div class="box33">
+                        <div class="box34">
+                            <i class="fa-solid fa-chess-knight"></i>
+                            <span>STRATEGY</span>
+                        </div>
+                        <div class="box35">
+                            <i class="fa-solid fa-crosshairs"></i>
+                            <span>REFLEX</span>
+                        </div>
+                        <div class="box36">
+                            <i class="fa-solid fa-brain"></i>
+                            <span>MEMORY</span>
+                        </div>
+                        <div class="box37">
+                            <i class="fa-solid fa-fire-flame-curved"></i>
+                            <h3>FEATURED ARENA</h3>
+                            <p>3 Playable Built-In Engines Ready</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="box38" id="arena">
+            <div class="box39">
+                <div class="box40">
+                    <span>INTERACTIVE PLAYGROUND</span>
+                    <h2>PLAYABLE BROWSER MINI-GAMES</h2>
+                    <p>Switch between three fully playable browser games right here and earn coins.</p>
+                </div>
+
+                <div class="box41">
+                    <button class="box42 box43" data-game="game1">
+                        <i class="fa-solid fa-crosshairs"></i>
+                        <span>CYBER TARGET</span>
+                    </button>
+                    <button class="box42" data-game="game2">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>MEMORY MATRIX</span>
+                    </button>
+                    <button class="box42" data-game="game3">
+                        <i class="fa-solid fa-hand-fist"></i>
+                        <span>DUEL RPS</span>
+                    </button>
+                </div>
+
+                <div class="box44">
+                    <div class="box45 box46" id="game1">
+                        <div class="box47">
+                            <div class="box48">
+                                <span>SCORE: <strong id="aimScore">0</strong></span>
+                                <span>TIME: <strong id="aimTime">20</strong>s</span>
+                            </div>
+                            <button class="box49" id="startAimBtn">START AIM TEST</button>
+                        </div>
+                        <div class="box50" id="aimBoard">
+                            <div class="box51" id="aimMessage">Click START AIM TEST to hit targets</div>
+                            <div class="box52" id="aimTarget">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box45" id="game2">
+                        <div class="box47">
+                            <div class="box48">
+                                <span>MOVES: <strong id="memMoves">0</strong></span>
+                                <span>MATCHES: <strong id="memMatches">0</strong>/4</span>
+                            </div>
+                            <button class="box49" id="resetMemBtn">SHUFFLE CARDS</button>
+                        </div>
+                        <div class="box53" id="memoryGrid"></div>
+                    </div>
+
+                    <div class="box45" id="game3">
+                        <div class="box47">
+                            <div class="box48">
+                                <span>YOU: <strong id="rpsPlayerScore">0</strong></span>
+                                <span>BOT: <strong id="rpsBotScore">0</strong></span>
+                            </div>
+                            <div class="box54" id="rpsResultText">Choose your move below</div>
+                        </div>
+                        <div class="box55">
+                            <div class="box56">
+                                <div class="box57" id="playerChoiceIcon"><i class="fa-solid fa-question"></i></div>
+                                <span>YOU</span>
+                            </div>
+                            <div class="box58">VS</div>
+                            <div class="box56">
+                                <div class="box57" id="botChoiceIcon"><i class="fa-solid fa-robot"></i></div>
+                                <span>BOT</span>
+                            </div>
+                        </div>
+                        <div class="box59">
+                            <button class="box60" data-move="rock"><i class="fa-solid fa-hand-back-fist"></i> ROCK</button>
+                            <button class="box60" data-move="paper"><i class="fa-solid fa-hand"></i> PAPER</button>
+                            <button class="box60" data-move="scissors"><i class="fa-solid fa-hand-scissors"></i> SCISSORS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="box61" id="catalog">
+            <div class="box62">
+                <div class="box40">
+                    <span>ARCADE LIBRARY</span>
+                    <h2>POPULAR MINI-GAMES</h2>
+                    <p>Filter by genre and launch instant sessions</p>
+                </div>
+
+                <div class="box63">
+                    <button class="box64 box65" data-filter="all">ALL GAMES</button>
+                    <button class="box64" data-filter="reflex">REFLEX</button>
+                    <button class="box64" data-filter="puzzle">PUZZLE</button>
+                    <button class="box64" data-filter="action">ACTION</button>
+                </div>
+
+                <div class="box66">
+                    <div class="box67 box68" data-category="reflex">
+                        <div class="box69">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span class="box70">REFLEX</span>
+                        </div>
+                        <div class="box71">
+                            <h3>NEON DASH</h3>
+                            <p>Dodge incoming geometric barriers at hyper speed.</p>
+                            <div class="box72">
+                                <span><i class="fa-solid fa-star"></i> 4.9</span>
+                                <span><i class="fa-solid fa-users"></i> 3.2k</span>
+                            </div>
+                            <button class="box73">PLAY GAME</button>
+                        </div>
+                    </div>
+
+                    <div class="box67 box68" data-category="puzzle">
+                        <div class="box69">
+                            <i class="fa-solid fa-cubes"></i>
+                            <span class="box70">PUZZLE</span>
+                        </div>
+                        <div class="box71">
+                            <h3>BLOCK FUSION</h3>
+                            <p>Align falling blocks and clear multi-line combos.</p>
+                            <div class="box72">
+                                <span><i class="fa-solid fa-star"></i> 4.8</span>
+                                <span><i class="fa-solid fa-users"></i> 5.1k</span>
+                            </div>
+                            <button class="box73">PLAY GAME</button>
+                        </div>
+                    </div>
+
+                    <div class="box67 box68" data-category="action">
+                        <div class="box69">
+                            <i class="fa-solid fa-jet-fighter-up"></i>
+                            <span class="box70">ACTION</span>
+                        </div>
+                        <div class="box71">
+                            <h3>STAR DEFENDER</h3>
+                            <p>Pilot an interceptor through asteroid belts.</p>
+                            <div class="box72">
+                                <span><i class="fa-solid fa-star"></i> 4.7</span>
+                                <span><i class="fa-solid fa-users"></i> 2.8k</span>
+                            </div>
+                            <button class="box73">PLAY GAME</button>
+                        </div>
+                    </div>
+
+                    <div class="box67 box68" data-category="puzzle">
+                        <div class="box69">
+                            <i class="fa-solid fa-border-all"></i>
+                            <span class="box70">PUZZLE</span>
+                        </div>
+                        <div class="box71">
+                            <h3>SUDOKU MASTER</h3>
+                            <p>Timed logic grids with progressive difficulty.</p>
+                            <div class="box72">
+                                <span><i class="fa-solid fa-star"></i> 4.9</span>
+                                <span><i class="fa-solid fa-users"></i> 4.4k</span>
+                            </div>
+                            <button class="box73">PLAY GAME</button>
+                        </div>
+                    </div>
+
+                    <div class="box67 box68" data-category="reflex">
+                        <div class="box69">
+                            <i class="fa-solid fa-stopwatch"></i>
+                            <span class="box70">REFLEX</span>
+                        </div>
+                        <div class="box71">
+                            <h3>CLICK STORM</h3>
+                            <p>Test your clicks per second against global records.</p>
+                            <div class="box72">
+                                <span><i class="fa-solid fa-star"></i> 4.6</span>
+                                <span><i class="fa-solid fa-users"></i> 6.0k</span>
+                            </div>
+                            <button class="box73">PLAY GAME</button>
+                        </div>
+                    </div>
+
+                    <div class="box67 box68" data-category="action">
+                        <div class="box69">
+                            <i class="fa-solid fa-dragon"></i>
+                            <span class="box70">ACTION</span>
+                        </div>
+                        <div class="box71">
+                            <h3>DUNGEON SPRINT</h3>
+                            <p>Escape traps and collect golden relics before time runs out.</p>
+                            <div class="box72">
+                                <span><i class="fa-solid fa-star"></i> 4.8</span>
+                                <span><i class="fa-solid fa-users"></i> 1.9k</span>
+                            </div>
+                            <button class="box73">PLAY GAME</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="box74" id="leaderboard">
+            <div class="box75">
+                <div class="box40">
+                    <span>HALL OF FAME</span>
+                    <h2>TOP ARENA PLAYERS</h2>
+                    <p>Weekly high scores across all browser mini-games</p>
+                </div>
+
+                <div class="box76">
+                    <div class="box77 box78">
+                        <span>RANK</span>
+                        <span>PLAYER</span>
+                        <span>FAVORITE GAME</span>
+                        <span>POINTS</span>
+                    </div>
+                    <div class="box77">
+                        <span class="box79">#1</span>
+                        <span><i class="fa-solid fa-crown"></i> ShadowStrike</span>
+                        <span>Cyber Target</span>
+                        <span>98,450 PTS</span>
+                    </div>
+                    <div class="box77">
+                        <span class="box80">#2</span>
+                        <span><i class="fa-solid fa-medal"></i> NovaByte</span>
+                        <span>Memory Matrix</span>
+                        <span>91,200 PTS</span>
+                    </div>
+                    <div class="box77">
+                        <span class="box81">#3</span>
+                        <span><i class="fa-solid fa-award"></i> TurboFox</span>
+                        <span>Neon Dash</span>
+                        <span>87,900 PTS</span>
+                    </div>
+                    <div class="box77">
+                        <span>#4</span>
+                        <span><i class="fa-solid fa-user-ninja"></i> PixelKnight</span>
+                        <span>Block Fusion</span>
+                        <span>82,340 PTS</span>
+                    </div>
+                    <div class="box77">
+                        <span>#5</span>
+                        <span><i class="fa-solid fa-headset"></i> CyberVortex</span>
+                        <span>Duel RPS</span>
+                        <span>79,110 PTS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="box82" id="tournaments">
+            <div class="box83">
+                <div class="box40">
+                    <span>COMPETITIVE EVENTS</span>
+                    <h2>WEEKEND TOURNAMENTS</h2>
+                    <p>Register with one click and compete for bonus arcade coins</p>
+                </div>
+
+                <div class="box84">
+                    <div class="box85 box86">
+                        <div class="box87">
+                            <span class="box88">LIVE REGISTRATION</span>
+                            <h3>FRIDAY REFLEX CUP</h3>
+                            <p>Compete in Cyber Target for the fastest 20-second score.</p>
+                            <div class="box89">
+                                <span><i class="fa-solid fa-trophy"></i> 5,000 Coins</span>
+                                <span><i class="fa-solid fa-clock"></i> Starts in 2h</span>
+                            </div>
+                        </div>
+                        <button class="box90">JOIN CUP</button>
+                    </div>
+
+                    <div class="box85 box91">
+                        <div class="box87">
+                            <span class="box88">OPEN ENTRY</span>
+                            <h3>MEMORY GRAND PRIX</h3>
+                            <p>Clear the Memory Matrix with the fewest possible moves.</p>
+                            <div class="box89">
+                                <span><i class="fa-solid fa-trophy"></i> 3,500 Coins</span>
+                                <span><i class="fa-solid fa-clock"></i> Tomorrow</span>
+                            </div>
+                        </div>
+                        <button class="box90">JOIN CUP</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="box100" id="esports">
+            <div class="box101">
+                <div class="box40">
+                    <span>TOP ESPORTS <i class="fa-solid fa-sparkles"></i> ARENA TITLES</span>
+                    <h2>LEGENDARY GAMES <i class="fa-solid fa-plus"></i> PLAYER PROFILES</h2>
+                    <p>Explore top competitive titles and inspect featured pro profiles inspired by arena combat</p>
+                </div>
+
+                <div class="box102">
+                    <div class="box103">
+                        <div class="box104">
+                            <i class="fa-solid fa-crosshairs"></i>
+                            <span class="box105">BATTLE ROYALE</span>
+                        </div>
+                        <h3>PUBG MOBILE</h3>
+                        <p>100-player tactical survival across large islands, urban zones, and high-stakes endgame circles.</p>
+                        <div class="box106">
+                            <span><i class="fa-solid fa-shield-halved"></i> Rank: Conqueror</span>
+                            <span><i class="fa-solid fa-fire"></i> K/D: 5.42</span>
+                        </div>
+                        <button class="box107" data-profile="pubg">VIEW PRO PROFILE</button>
+                    </div>
+
+                    <div class="box103">
+                        <div class="box104">
+                            <i class="fa-solid fa-wand-sparkles"></i>
+                            <span class="box105">5V5 MOBA</span>
+                        </div>
+                        <h3>MOBILE LEGENDS</h3>
+                        <p>Fast-paced lane battles, hero combos, objective control, and coordinated team fights in the Land of Dawn.</p>
+                        <div class="box106">
+                            <span><i class="fa-solid fa-crown"></i> Rank: Mythic Glory</span>
+                            <span><i class="fa-solid fa-bolt"></i> Win Rate: 68%</span>
+                        </div>
+                        <button class="box107" data-profile="mlbb">VIEW PRO PROFILE</button>
+                    </div>
+
+                    <div class="box103">
+                        <div class="box104">
+                            <i class="fa-solid fa-gun"></i>
+                            <span class="box105">TACTICAL SHOOTER</span>
+                        </div>
+                        <h3>VALORANT STRIKE</h3>
+                        <p>Precision crosshair placement, agent abilities, spike planting, and round-by-round economy strategy.</p>
+                        <div class="box106">
+                            <span><i class="fa-solid fa-crosshairs"></i> Rank: Immortal</span>
+                            <span><i class="fa-solid fa-bullseye"></i> HS Rate: 31%</span>
+                        </div>
+                        <button class="box107" data-profile="val">VIEW PRO PROFILE</button>
+                    </div>
+
+                    <div class="box103">
+                        <div class="box104">
+                            <i class="fa-solid fa-car-burst"></i>
+                            <span class="box105">ARCADE RACING</span>
+                        </div>
+                        <h3>APEX DRIFT</h3>
+                        <p>High-speed street circuits, nitro timing, hairpin drifts, and split-second overtaking duels.</p>
+                        <div class="box106">
+                            <span><i class="fa-solid fa-gauge-high"></i> Class: S-Tier</span>
+                            <span><i class="fa-solid fa-trophy"></i> 142 Wins</span>
+                        </div>
+                        <button class="box107" data-profile="drift">VIEW PRO PROFILE</button>
+                    </div>
+                </div>
+
+                <div class="box108" id="proProfileCard">
+                    <div class="box109">
+                        <div class="box110">
+                            <img src="https://images.pexels.com/photos/29282977/pexels-photo-29282977.jpeg?cs=srgb&dl=pexels-achi-murusidze-2064615248-29282977.jpg&fm=jpg" alt="" id="profileAvatarImg">
+                        </div>
+                        <div class="box111">
+                            <span class="box112" id="profileGameBadge">PUBG MOBILE PROFILE</span>
+                            <h3 id="profilePlayerName">ViperRecon</h3>
+                            <p id="profileBio">Aggressive entry fragger and squad scout specializing in mid-range spray control and final circle rotations.</p>
+                        </div>
+                    </div>
+                    <div class="box113">
+                        <div class="box114">
+                            <span>CURRENT RANK</span>
+                            <strong id="profileRankVal">Conqueror</strong>
+                        </div>
+                        <div class="box114">
+                            <span>MAIN ROLE</span>
+                            <strong id="profileRoleVal">Assault / Scout</strong>
+                        </div>
+                        <div class="box114">
+                            <span>SIGNATURE STAT</span>
+                            <strong id="profileStatVal">5.42 K/D Ratio</strong>
+                        </div>
+                        <div class="box114">
+                            <span>ACHIEVEMENT</span>
+                            <strong id="profileBadgeVal">Seasonal Top 100</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="box115" id="achievements">
+            <div class="box116">
+                <div class="box40">
+                    <span>PLAYER MILESTONES</span>
+                    <h2>ARENA ACHIEVEMENTS <i class="fa-solid fa-plus"></i> QUESTS</h2>
+                    <p>Unlock prestige badges by completing daily mini-game challenges</p>
+                </div>
+
+                <div class="box117">
+                    <div class="box118">
+                        <div class="box119"><i class="fa-solid fa-bullseye"></i></div>
+                        <h3>SHARPSHOOTER</h3>
+                        <p>Score 15+ hits in a single Cyber Target round.</p>
+                        <div class="box120"><div class="box121" style="width: 85%;"></div></div>
+                        <span class="box122">85% COMPLETED</span>
+                    </div>
+
+                    <div class="box118">
+                        <div class="box119"><i class="fa-solid fa-brain"></i></div>
+                        <h3>PHOTOGRAPHIC MIND</h3>
+                        <p>Clear Memory Matrix in under 8 total moves.</p>
+                        <div class="box120"><div class="box121" style="width: 60%;"></div></div>
+                        <span class="box122">60% COMPLETED</span>
+                    </div>
+
+                    <div class="box118">
+                        <div class="box119"><i class="fa-solid fa-fire"></i></div>
+                        <h3>WIN STREAK KING</h3>
+                        <p>Win 5 consecutive rounds against the Duel RPS bot.</p>
+                        <div class="box120"><div class="box121" style="width: 100%;"></div></div>
+                        <span class="box122">UNLOCKED</span>
+                    </div>
+
+                    <div class="box118">
+                        <div class="box119"><i class="fa-solid fa-coins"></i></div>
+                        <h3>COIN COLLECTOR</h3>
+                        <p>Accumulate 2,500 arcade coins in your wallet.</p>
+                        <div class="box120"><div class="box121" style="width: 50%;"></div></div>
+                        <span class="box122">50% COMPLETED</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="box123" id="gear">
+            <div class="box124">
+                <div class="box40">
+                    <span>PRO SETUP <i class="fa-solid fa-plus"></i> PERKS</span>
+                    <h2>ARCADE BOOSTERS <i class="fa-solid fa-plus"></i> GEAR</h2>
+                    <p>Spend your earned coins on instant profile upgrades and reflex boosters</p>
+                </div>
+
+                <div class="box125">
+                    <div class="box126">
+                        <div class="box127">
+                            <i class="fa-solid fa-computer-mouse"></i>
+                            <span>250 COINS</span>
+                        </div>
+                        <h3>ZERO-LATENCY CURSOR</h3>
+                        <p>Custom gold crosshair trail for Cyber Target precision mode.</p>
+                        <button class="box128" data-cost="250">UNLOCK ITEM</button>
+                    </div>
+
+                    <div class="box126">
+                        <div class="box127">
+                            <i class="fa-solid fa-bolt-lightning"></i>
+                            <span>400 COINS</span>
+                        </div>
+                        <h3>DOUBLE COIN BOOSTER</h3>
+                        <p>Earn 2x coin rewards across all Live Arena mini-games.</p>
+                        <button class="box128" data-cost="400">UNLOCK ITEM</button>
+                    </div>
+
+                    <div class="box126">
+                        <div class="box127">
+                            <i class="fa-solid fa-crown"></i>
+                            <span>600 COINS</span>
+                        </div>
+                        <h3>MYTHIC BANNER FRAME</h3>
+                        <p>Animated golden profile border displayed on the global leaderboard.</p>
+                        <button class="box128" data-cost="600">UNLOCK ITEM</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="box129" id="faq">
+            <div class="box130">
+                <div class="box40">
+                    <span>PLAYER GUIDE</span>
+                    <h2>FREQUENTLY ASKED QUESTIONS</h2>
+                    <p>Everything you need to know about browser mini-games and rewards</p>
+                </div>
+
+                <div class="box131">
+                    <div class="box132">
+                        <button class="box133">
+                            <span>Do I need to install anything to play these mini-games?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="box134">
+                            <p>No downloads or plugins are required. Every mini-game runs directly in your browser using lightweight vanilla JavaScript.</p>
+                        </div>
+                    </div>
+
+                    <div class="box132">
+                        <button class="box133">
+                            <span>How do I earn and spend Arcade Coins?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="box134">
+                            <p>You earn coins automatically by hitting targets in Cyber Target, matching cards in Memory Matrix, winning Duel RPS rounds, and claiming daily rewards.</p>
+                        </div>
+                    </div>
+
+                    <div class="box132">
+                        <button class="box133">
+                            <span>How are PUBG Mobile and Mobile Legends profiles updated?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="box134">
+                            <p>Featured pro profiles showcase seasonal rank milestones, K/D ratios, and win rates from top regional arena competitors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="box92">
+            <div class="box93">
+                <div class="box94">
+                    <div class="box14">
+                        <i class="fa-solid fa-dice-d20"></i>
+                        <span>ARCADE.UZ</span>
+                    </div>
+                    <p>Next-generation browser mini-game hub built for instant fun, crisp animations, and zero lag.</p>
+                </div>
+                <div class="box95">
+                    <h4>QUICK LINKS</h4>
+                    <a href="#home">Home</a>
+                    <a href="#arena">Live Arena</a>
+                    <a href="#catalog">Games</a>
+                    <a href="#leaderboard">Leaderboard</a>
+                    <a href="#esports">Top Titles</a>
+                </div>
+                <div class="box95">
+                    <h4>ARENA HUB</h4>
+                    <a href="#achievements">Achievements</a>
+                    <a href="#gear">Pro Gear</a>
+                    <a href="#tournaments">Tournaments</a>
+                    <a href="#faq">Player FAQ</a>
+                </div>
+                <div class="box96">
+                    <h4>DAILY REWARD</h4>
+                    <p>Claim 100 free arcade coins every session.</p>
+                    <button class="box97" id="claimRewardBtn">CLAIM 100 COINS</button>
+                </div>
+            </div>
+            <div class="box98">
+                <p><i class="fa-regular fa-copyright"></i> 2026 Akhathanov</p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="box99" id="toastNotification">
+        <span class="box25"></span>
+        <span id="toastText">Action completed</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
